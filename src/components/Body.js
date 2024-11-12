@@ -48,6 +48,7 @@ const Body = () => {
             <h1>Looks like you're offline!! Please check your internet connection</h1>
         );
 
+    //Testing purpose Abhijoy
     //Conditional Rendering
     /*if(listOfRestaurants.length==0){
         return <Shimmer/>
