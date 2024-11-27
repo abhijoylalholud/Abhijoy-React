@@ -22,7 +22,7 @@ class UserClass extends React.Component {
     }
 
     //async,await is used for api calls
-    /*async componentDidMount(){
+    async componentDidMount(){
         //console.log(this.props.name + "Child Component Did Mount");
         const data = await fetch("https://api.github.com/users/abhijoysamaddar");
         const json =  await data.json();
@@ -31,7 +31,7 @@ class UserClass extends React.Component {
             userInfo: json, 
         });
         console.log(json);
-    }*/
+    }
 
     componentDidMount(){
         this.timer = setInterval( () => {

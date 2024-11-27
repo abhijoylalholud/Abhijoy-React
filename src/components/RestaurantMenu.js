@@ -10,6 +10,8 @@ const RestaurantMenu = () => {
 
     const {resId} = useParams();
 
+    const dummy = "Dummy data";
+
     const resInfo = useResTaurantMenu(resId); //Custom Hook
 
     //const [showIndex, setShowIndex] = useState(null); //for all accordions close
@@ -55,6 +57,7 @@ const RestaurantMenu = () => {
                     data={category?.card?.card} 
                     showItems={index === showIndex ? true : false }
                     setShowIndex={ () => setShowIndex(index) }
+                    dummy = {dummy}
                 /> 
             ) }
         </div>
