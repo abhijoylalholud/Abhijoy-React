@@ -1,9 +1,10 @@
 import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
@@ -48,6 +49,7 @@ const Body = () => {
             <h1>Looks like you're offline!! Please check your internet connection</h1>
         );
 
+    const {loggedInUser, setUserName} = useContext(UserContext);
     //Testing purpose Abhijoy
     //Conditional Rendering
     /*if(listOfRestaurants.length==0){
@@ -82,6 +84,12 @@ const Body = () => {
                         } }>
                         Top Rated Restaurants
                     </button>
+                </div>
+
+                {/* New button for context value change */}
+                <div className="search m-4 p-4 flex items-center">
+                <label>User Name: </label>
+                    <input className="border border-black p-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)} />
                 </div>
                 
             </div>

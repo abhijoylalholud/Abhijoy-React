@@ -26,11 +26,11 @@ const Applayout = () => {
     }, []);
 
     return (
-        <UserContext.Provider value={{loggedInUser: userName}}>
+        <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
             <div className="app">
-                <UserContext.Provider value={{loggedInUser: "Ayana Chowdhury"}}>
+                {/* <UserContext.Provider value={{loggedInUser: "Ayana Chowdhury"}}> */}
                     <Header/>
-                </UserContext.Provider>
+                {/* </UserContext.Provider> */}
                 <Outlet/>
             </div>
         </UserContext.Provider>
