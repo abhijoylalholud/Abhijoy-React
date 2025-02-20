@@ -4,13 +4,14 @@ import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
     const { resData } = props;
+    //console.log(resData);
     const {loggedInUser} = useContext(UserContext);
 
     const {cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla} = resData?.info;
 
     return (
         // <div className="m-4 p-4 w-[250px] rounded-lg hover:bg-gray-400" style={{ backgroundColor: "#f0f0f0", padding: "5px" }}>
-        <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+        <div data-testid="resCard" className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
             <img className="rounded-lg" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} alt="res-logo" />
             <h3 className="font-bold py-4 text-lg">{name}</h3>
             <h4>{cuisines.join(', ')}</h4>
