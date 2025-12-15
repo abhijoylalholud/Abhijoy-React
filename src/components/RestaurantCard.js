@@ -28,6 +28,7 @@ const RestaurantCard = (props) => {
 
 export const withPromotedLabel = (RestaurantCard) => {
     return (props) => {
+        console.log("Boltu",props);
         return(
             <div>
                 <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
